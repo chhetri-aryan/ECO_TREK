@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoTrek</title>
+
+    <link rel="icon" href="im/icon.png" sizes="16x16 32x32 48x48" type="image/png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/myjs.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="st.scss">
+
+</head>
+
+<body>
+
+    <!--nav bar-->
+    <section id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="im/logo.png" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
+                    Eco<span class="text-success">trek™</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home"><i class="bi bi-house"></i> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#goal"><i class="bi bi-rocket-takeoff"></i> SDG </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mission"><i class="bi bi-info-circle"></i> Mission </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#donate"> <i class="bi bi-cash-coin"></i> Donate </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team"> <i class="bi bi-people-fill"></i> Dev </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact"> <i class="bi bi-person-lines-fill"></i> Contact </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!--Image Slider-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="im/1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h5>PHOTOGRAPH BY CORY RICHARDS</h5>
+                        <p>An African savanna elephant roams Botswana's Okavango Delta. The wetland is home to the
+                            continent's largest population of this endangered species.</p>
+                        <p><a href="https://www.nationalgeographic.com/environment/article/okavango-delta-unesco-world-heritage-site-expansion"
+                                class="btn btn-warning mt-3" target="_blank">> Learn More</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="im/2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h5>PHOTOGRAPH BY GARY HERSHORN</h5>
+                        <p>Scientists think trees release a red-producing chemical in the fall to help the tree absorb
+                            the tree's last remaining nutrients before winter strikes. Warming temperatures have been
+                            delaying this color change, with unclear consequences for trees' health. </p>
+                        <p><a href="https://www.nationalgeographic.com/environment/article/fall-foliage-disrupted-by-climate-change-might-be-new-normal"
+                                class="btn btn-warning mt-3" target="_blank">> Learn More</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="im/3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h5>PHOTOGRAPH BY LUCA RENNER</h5>
+                        <p>Escudo de Veraguas, an island known for its lush forests and crystalline waters, is roughly
+                            one hour from Rio Caña, an Indigenous Ngäbe Buglé community, featured on a new tourism
+                            network in Panama. The island is the only place were travelers can see the rare three-toed
+                            pygmy sloth.</p>
+                        <p><a href="https://www.nationalgeographic.com/travel/article/panama-community-tourism-sostur"
+                                class="btn btn-warning mt-3" target="_blank">> Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <!--goal section-->
+    <section id="goal" class="section-padding bg-warning">
+        <!-- <hr class="border border-success border-5 opacity-50"> -->
+
+        <div class="container-fluid reveal ">
+            <div class="row">
+                <div class="display-2 mb-2 mt-5 text-center fw-medium shadow-lg">Sustainable Development Goals</div>
+                <div class="col-lg-12 col-md-12 col-12">
+                    <p class="text-center h3"><em>To be achieved by 2030.</em></p>
+                    <!--starts here-->
+                    <div class="row">
+                        <div class="col d-flex flex-wrap justify-content-center m-5 shadow-lg">
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s1.png" class="card-img-top" alt="" onclick="href">
+                                <a href="https://www.undp.org/sustainable-development-goals/no-poverty" target=_blank
+                                    class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s2.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/zero-hunger" target=_blank
+                                    class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s3.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/good-health" target=_blank
+                                    class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s4.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/quality-education"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s5.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/gender-equality"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s6.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/clean-water-and-sanitation"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s7.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/affordable-and-clean-energy"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s8.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/decent-work-and-economic-growth"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s9.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/industry-innovation-and-infrastructure"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s10.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/reduced-inequalities"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s11.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/sustainable-cities-and-communities"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s12.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/responsible-consumption-and-production"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s13.png" class="card-img-top" alt="">
+                                <a href="http://ndp.org/sustainable-development-goals/climate-action" target=_blank
+                                    class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s14.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/below-water" target=_blank
+                                    class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s15.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/life-on-land" target=_blank
+                                    class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s16.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/peace-justice-and-strong-institutions"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+
+                            <div class="card cc" style="width: 7rem;">
+                                <img src="im/s17.png" class="card-img-top" alt="">
+                                <a href="https://www.undp.org/sustainable-development-goals/partnerships-for-the-goals"
+                                    target=_blank class="stretched-link"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--Mission section-->
+    <section id="mission" class="section-padding bg-primary-subtle">
+        <div class="container-fluid reveal">
+            <div id="mh2" class=" display-2 fw-medium text-center ">Our Mission</div>
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-12 col-12 align-middle">
+                    <div class="about-image">
+                        <img src="im/save.png" alt="into the woods" id="save" class="img-fluid align-self-center mt-5">
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="mission-text">
+
+                        <p>The mission of nature conservation is to protect and preserve the natural world, including
+                            its biodiversity, ecosystems, and landscapes. This is important for a number of reasons:
+                        </p>
+                        <ul>
+                            <li>Nature provides us with essential resources, such as clean air and water, food, and
+                                medicine.</li>
+                            <li>Nature plays a vital role in regulating the climate and supporting human health and
+                                well-being.</li>
+                            <li>Nature is home to an incredible diversity of life, and we have a moral obligation to
+                                protect
+                                it for future generations.</li>
+                        </ul>
+                        <p>Nature conservation is a complex and challenging task, but it is essential for the future
+                            of
+                            our planet and our species. Conservationists work to address a wide range of threats to
+                            nature, including habitat loss, pollution, overexploitation, and climate change. They also
+                            work to educate the public about the importance of nature and to promote sustainable
+                            practices.
+                        </p>
+                        <!-- <ul>
+                            <li>Protecting and restoring critical habitats</li>
+                            <li>Conserving threatened and endangered species</li>
+                            <li>Promoting sustainable management of natural resources</li>
+                            <li>Reducing pollution and other environmental impacts</li>
+                            <li>Educating the public about the importance of nature</li>
+
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Donation Section-->
+    <section id="donate" class="section-padding bg-warning-subtle">
+        <div class="container-fluid reveal">
+            <div class="row">
+                <div id="dh2" class="display-2 fw-medium text-center ">Save The Environment</div>
+
+                <div class="col-lg-9 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="mission-text">
+                        <h1><br>Tree Planting:</h1>
+                        <p>In Kurnool district, deforestation has become a major concern. SERUDS NGO is working to
+                            promote reforestation by planting trees in areas where deforestation has occurred.
+                        </p>
+                        <h1>Waste Management:</h1>
+                        <p>SERUDS NGO is working to address this issue by providing waste management solutions to local
+                            communities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-12">
+                    <div class="about-image">
+
+                        <img src="im/plant.jpg" alt="into the woods" class="img-fluid w-75 align-self-center mt-5" id="plant">
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-12 col-12 ps-lg-5 md-5">
+                    <div class="mission-text">
+                        <h1>Community Clean-Up:</h1>
+                        <p>SERUDS NGO organizes regular community clean-up events in Kurnool district. We work with
+                            local communities to identify areas that need to be cleaned up, and we provide the necessary
+                            resources and equipment to make it happen.</p>
+                        <h1>Water Conservation:</h1>
+                        <p>Kurnool district faces severe water scarcity during the summer months. SERUDS NGO is working
+                            to promote water conservation practices in the district.
+                            SERUDS NGO can also help raise awareness about the benefits of rainwater harvesting and
+                            encourage people to adopt this practice in their communities.
+                            </p>
+
+                        <p><a href="https://serudsindia.org/contribute-donation-for-charity/"
+                                class="btn btn-success mt-5 btn-lg " target="_blank">> Donate <i
+                                    class="bi bi-cash-coin"></i></a></p>
+                        <p class="lead text-uppercase fw-bold">
+                            *All donation money will go directly to SERUDSIndia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-1">
+                    <div class="about-image">
+
+                        <img src="im/clean.png" alt="into the woods" class="img-fluid w-75">
+                    </div>
+
+                    <div class="about-image">
+
+                        <img src="im/water.png" alt="into the woods" class="img-fluid w-75">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!--Team Section-->
+    <section id="team" class="section-padding bg-success-subtle" >
+        <div class="container-fluid reveal" >
+            <div class="row mb-5">
+                <h2 class="display-2 text-center">Our Team</h2>
+            </div>
+            <div class=" row d-flex justify-content-center shadow-lg p-5">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="im/pp.png" alt="" class="img-fluid rounded-circle p-5">
+                            <h3 class="card-title py-2">Aryan Chhetri</h3>
+                            <p class="card-text">Full Stack Web Developer | Android App Developer</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-linkedin text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="im/pp2.jpg" alt="" class="img-fluid rounded-circle p-5">
+                            <h3 class="card-title py-2">Alan Waker</h3>
+                            <p class="card-text">Alan Walker is a British Norwegian music producer and DJ.</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-linkedin text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="im/pp2.png" alt="" class="img-fluid rounded-circle p-5">
+                            <h3 class="card-title py-2">Sneha.P</h3>
+                            <p class="card-text">Cloud Architect | Bussiness Management</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-linkedin text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Section-->
+    <section id="contact" class="section-padding bg-info ">
+        <div class="container-fluid reveal shadow-lg">
+            <div class="col-lg-12 col-md-12 col-12 ps-lg-5 mt-5">
+                <div class="display-2 fw-medium pb-5 text-center pt-5">Contact us for any Queries <i
+                        class="bi bi-person-raised-hand"></i></div>
+                <form>
+                    <div class="mb-5 me-5">
+                        <label for="email" class="form-label h1 ">Email address:</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+
+                        <div class="mt-5 mb-3">
+                            <label for="textarea" class="form-label h1">Query:</label>
+                            <textarea class="form-control" id="textarea" rows="4"></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-lg btn-success mb-5" id="liveToastBtn"
+                            action="#">Submit</button>
+                        <!--id=liveToastBtn-->
+                </form>
+
+                <div class="position-fixed end-0 bottom-0">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                    data-bs-delay="5000">
+                    <div class="toast-header">
+                        <img src="im/logo.png" class="rounded me-2 img-fluid" width="75" height="40" alt="logo">
+                        <strong class="me-auto">EcoTrek™</strong>
+                        <small>just now</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Query successfully submitted.
+                    </div>
+                </div>
+
+                <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="email-id">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Hi,</strong> Please fill with valid email address.
+                </div>
+
+                <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="query-text">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Hi,</strong> Please enter your query.
+                </div>
+
+            </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!--footer section-->
+    <div class="m-0">
+
+        <footer class="" style="background-color: #41ed7a;">
+            <div class="container d-flex justify-content-center py-5 ">
+
+                <div class="btn align-middle"><i class="bi bi-youtube h1"></i></div>
+                <div class="btn align-middle"><i class="bi bi-instagram h1"></i></div>
+                <div class="btn align-middle"> <i class="bi bi-twitter  h1"></i></div>
+
+            </div>
+
+            <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:
+                <a class="text-white" href="#home">Conserve Nature™</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
