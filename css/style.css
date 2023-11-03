@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@900&display=swap');
+
+
+* {
+    font-family: Poppins;
+}
+
+body {
+    background: #bebebe;
+}
+
+.section-padding {
+    padding: 80px 160px;
+}
+
+p {
+    font-size: 25px;
+    font: bold;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+/* mission css */
+
+.mission-text li{
+    font-size: 22px;
+}
+
+
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.navbar-nav a {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.navbar-brand {
+
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* .navbar-brand:focus,
+.navbar-brand:hover {
+    color: #000;
+} */
+
+.navbar-item {
+    color: #000000;
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+/* Responsive css using media */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .carousel-caption {
+        bottom: 370px;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-caption {
+        bottom: 125px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 17px;
+    }
+
+    .carousel-caption a {
+        padding: 10px 15px;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+
+
+}
+
+
+
+/* animation */
+
+/* Animation property */
+.ani {
+    animation: wiggle 2s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,100% {
+        transform: rotateZ(0);
+    }
+}
+
+
+
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.cc{
+    filter: grayscale(100%);
+    margin: 1rem;
+    transition: ease-out 400ms;
+    border:white solid 4px;
+    border-radius: 8%;
+}
+
+.cc:hover{
+    filter: grayscale(0);
+    transform: scale(130%);
+    z-index: 1;
+    transition : ease-in 500ms;
+    
+    
+}
+
