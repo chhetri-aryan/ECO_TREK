@@ -5,6 +5,10 @@
     font-family: Poppins;
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 body {
     background: #bebebe;
 }
