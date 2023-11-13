@@ -77,6 +77,72 @@ $(document).ready(function () {
 
   });
 
+  
+  document.getElementById("sub1")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+
+      var electricityBill = $("#electric-bill").val();
+      var vehicleMileage = $("#vehicle-milage").val();
+      var gasBill = $("#gas-bill").val();
+      var oilBill = $("#oil-bill").val();
+      var flight = $("#flight").val();
+      var flights = $("#flights").val();
+
+      var rp = $("#rp").val();
+      var rm = $("#rm").val();
+
+      window.alert(rp);
+      
+      
+      // window.alert(electricityBill);
+
+      var eb=electricityBill * 105;
+      var vm=vehicleMileage * 0.79
+      var gb= gasBill * 105;
+      var ob=oilBill * 113;
+      var fl= flight * 1100;
+      var fls=flights * 4400;
+      var rrp=rp * 184;
+      var rrm= rm * 166;
+
+      var totalEmissions = eb+vm+gb+ob+fl+fls+rrp+rrm;
+
+      // window.alert(fl);
+
+      $("#result1").html("Total Emission : " + totalEmissions);
+
+
+      //Pie Chart
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Consumption', 'Units'],
+          ['Electricity', eb],
+          ['Vehicle', vm],
+          ['Gas', gb],
+          ['Oil', ob],
+          ['Flights', fl+fls]
+        ]);
+
+        var options = {
+        
+          
+          //pieHole: 0.4,
+          is3D: true,
+          
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
+        chart.draw(data, options);
+      }
+
+    });
+
 
 
 
