@@ -92,7 +92,7 @@ $(document).ready(function () {
       var rp = $("#rp").val();
       var rm = $("#rm").val();
 
-      window.alert(rp);
+      // window.alert(rp);
       
       
       // window.alert(electricityBill);
