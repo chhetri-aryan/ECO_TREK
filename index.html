@@ -17,6 +17,7 @@
     <script src="js/myjs.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="st.scss">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
 
@@ -51,6 +52,10 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="#donate"> <i class="bi bi-cash-coin"></i> Donate </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#calculator"> <i class="bi bi-calculator-fill"></i> CC </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#team"> <i class="bi bi-people-fill"></i> Dev </a>
@@ -253,10 +258,10 @@
         <div class="container-fluid reveal">
             <div id="mh2" class=" display-2 fw-medium text-center ">Our Mission</div>
             <div class="row text-justify">
-                
+
                 <div class="col-lg-4 col-md-12 col-12 align-middle">
-                    <div class="about-image">
-                        <img src="im/save.png" alt="into the woods" id="save" class="img-fluid align-self-center mt-5">
+                    <div class="about-image d-flex justify-content-center align-items-center">
+                        <img src="im/save.png" alt="into the woods" id="save" class="img-fluid mt-5">
                     </div>
                 </div>
 
@@ -317,7 +322,8 @@
                 <div class="col-lg-3 col-md-12 col-12">
                     <div class="about-image">
 
-                        <img src="im/plant.jpg" alt="into the woods" class="img-fluid w-75 align-self-center mt-5" id="plant">
+                        <img src="im/plant.jpg" alt="into the woods" class="img-fluid w-75 align-self-center mt-5"
+                            id="plant">
                     </div>
                 </div>
 
@@ -332,14 +338,9 @@
                             to promote water conservation practices in the district.
                             SERUDS NGO can also help raise awareness about the benefits of rainwater harvesting and
                             encourage people to adopt this practice in their communities.
-                            </p>
-
-                        <p><a href="https://serudsindia.org/contribute-donation-for-charity/"
-                                class="btn btn-success mt-5 btn-lg " target="_blank">> Donate <i
-                                    class="bi bi-cash-coin"></i></a></p>
-                        <p class="lead text-uppercase fw-bold">
-                            *All donation money will go directly to SERUDSIndia.
                         </p>
+
+
                     </div>
                 </div>
 
@@ -354,13 +355,127 @@
                         <img src="im/water.png" alt="into the woods" class="img-fluid w-75">
                     </div>
                 </div>
+                <p><a href="https://serudsindia.org/contribute-donation-for-charity/"
+                        class="btn btn-success mt-5 btn-lg " target="_blank">> Donate <i
+                            class="bi bi-cash-coin"></i></a></p>
+                <p class="lead text-uppercase fw-bold">
+                    *All donation money will go directly to SERUDSIndia.
+                </p>
             </div>
     </section>
 
 
+    <!--Calculator Section-->
+    <section id="calculator" class="section-padding bg-primary-subtle">
+
+        <div class="container-fluid reveal ">
+            <div class="text-center display-2">Carbon Footprint Calculator</div>
+            <div class=" row d-flex justify-content-around mr-10 shadow-lg">
+                <div class="col-12 col-md-6 col-lg-4 card m-5">
+
+                    <form>
+                        <div class="form-outline d-inline">
+                            <label class="form-label" for="electric-bill">Electric Bill (Rs):</label>
+                            <input type="number" id="electric-bill" class="form-control" placeholder="Eg., 500" />
+                        </div><br>
+
+                        <div class="form-outline d-inline">
+                            <label class="form-label" for="vehicle-milage">Vehicle Mileage (Km):</label>
+                            <input type="number" id="vehicle-milage" class="form-control" placeholder="Eg., 500" />
+                        </div><br>
+
+                        <div class="form-outline d-inline">
+                            <label class="form-label" for="gas-bill">Gas Bill (Rs):</label>
+                            <input type="number" id="gas-bill" class="form-control" placeholder="Eg., 2" />
+                        </div><br>
+
+                        <div class="form-outline d-inline">
+                            <label class="form-label" for="oil-bill">Oil Bill (Rs):</label>
+                            <input type="number" id="oil-bill" class="form-control" placeholder="Eg., 500" />
+                        </div><br>
+
+                        <div class="form-outline d-inline">
+                            <label class="form-label" for="flight">No. of Flights <b>Under</b> 4 hours:</label>
+                            <input type="number" id="flight" class="form-control" placeholder="Eg., 500" />
+                        </div><br>
+
+                        <div class="form-outline d-inline">
+                            <label class="form-label" for="flights">No. of Flights <b>Over</b> 4 hours:</label>
+                            <input type="number" id="flights" class="form-control" placeholder="Eg., 500" />
+                        </div><br>
+
+                        <div>
+                            <label class="form-label">Paper Recycle</label>
+                            <select class="form-select" aria-label="Default select example" id="rp">
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select><br>
+                        </div>
+
+                        <div>
+                            <label class="form-label">Metal Recycle</label>
+                            <select class="form-select" aria-label="Default select example " id="rm">
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select><br>
+                        </div>
+
+
+
+                        <button id="sub1" class="btn btn-outline-primary">Submit</button>
+                        
+                        <p id="result1"></p>
+
+                    </form>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 card m-5">
+
+
+                    <h2 id="result"></h2>
+                    <table id="emission-table" style="border: 5px black solid ;" class="table table-light table-hover">
+                        <tr class="table-dark">
+                            <th>Emission Range</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr class="table-success">
+                            <td>0 - 6000 pounds CO<sub>2</sub>e</td>
+                            <td>Very low carbon footprint</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <td>6000 - 15,999 pounds CO<sub>2</sub>e</td>
+                            <td>Low carbon footprint</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td>16,000 - 22,000 pounds CO<sub>2</sub>e</td>
+                            <td>Moderate carbon footprint</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <td>22,000+ pounds CO<sub>2</sub>e</td>
+                            <td>High carbon footprint</td>
+                        </tr>
+                    </table>
+
+                    <br>
+
+                    <div class="h2"> This is your Carbon FootPrint</div>
+                    <div id="donut_single" style="height:300px;" class="bg-light mt-3 mb-5 shad">
+                        <div class="h2 text-center "> <i class="bi bi-arrow-left"></i> Enter Values there </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
     <!--Team Section-->
-    <section id="team" class="section-padding bg-success-subtle" >
-        <div class="container-fluid reveal" >
+    <section id="team" class="section-padding bg-success-subtle">
+        <div class="container-fluid reveal">
             <div class="row mb-5">
                 <h2 class="display-2 text-center">Our Team</h2>
             </div>
@@ -435,33 +550,33 @@
                 </form>
 
                 <div class="position-fixed end-0 bottom-0">
-                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-                    data-bs-delay="5000">
-                    <div class="toast-header">
-                        <img src="im/logo.png" class="rounded me-2 img-fluid" width="75" height="40" alt="logo">
-                        <strong class="me-auto">EcoTrek™</strong>
-                        <small>just now</small>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                        data-bs-delay="5000">
+                        <div class="toast-header">
+                            <img src="im/logo.png" class="rounded me-2 img-fluid" width="75" height="40" alt="logo">
+                            <strong class="me-auto">EcoTrek™</strong>
+                            <small>just now</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Query successfully submitted.
+                        </div>
                     </div>
-                    <div class="toast-body">
-                        Query successfully submitted.
+
+                    <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="email-id">
+                        <i class="bi bi-info-circle"></i>
+                        <strong>Hi,</strong> Please fill with valid email address.
                     </div>
-                </div>
 
-                <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="email-id">
-                    <i class="bi bi-info-circle"></i>
-                    <strong>Hi,</strong> Please fill with valid email address.
-                </div>
+                    <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="query-text">
+                        <i class="bi bi-info-circle"></i>
+                        <strong>Hi,</strong> Please enter your query.
+                    </div>
 
-                <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="query-text">
-                    <i class="bi bi-info-circle"></i>
-                    <strong>Hi,</strong> Please enter your query.
                 </div>
-
-            </div>
             </div>
 
-            
+
         </div>
     </section>
 
@@ -479,7 +594,7 @@
 
             <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2023 Copyright:
-                <a class="text-white" href="#home">EcoTrek™</a>
+                <a class="text-white" href="#home">Conserve Nature™</a>
             </div>
         </footer>
 
