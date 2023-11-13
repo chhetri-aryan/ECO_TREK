@@ -72,9 +72,6 @@ $(document).ready(function () {
       }, 3000);
     }
 
-
-
-
   });
 
   
@@ -91,12 +88,7 @@ $(document).ready(function () {
 
       var rp = $("#rp").val();
       var rm = $("#rm").val();
-
-      // window.alert(rp);
-      
-      
-      // window.alert(electricityBill);
-
+    
       var eb=electricityBill * 105;
       var vm=vehicleMileage * 0.79
       var gb= gasBill * 105;
@@ -107,8 +99,6 @@ $(document).ready(function () {
       var rrm= rm * 166;
 
       var totalEmissions = eb+vm+gb+ob+fl+fls+rrp+rrm;
-
-      // window.alert(fl);
 
       $("#result1").html("Total Emission : " + totalEmissions);
 
@@ -142,10 +132,6 @@ $(document).ready(function () {
       }
 
     });
-
-
-
-
 
 
 });
